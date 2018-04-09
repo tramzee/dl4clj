@@ -5,7 +5,8 @@
            [org.deeplearning4j.datasets.iterator
             DoublesDataSetIterator FloatsDataSetIterator INDArrayDataSetIterator
             AsyncDataSetIterator AsyncMultiDataSetIterator CombinedPreProcessor
-            CombinedPreProcessor$Builder CurvesDataSetIterator IteratorDataSetIterator
+            ;; CombinedPreProcessor$Builder CurvesDataSetIterator IteratorDataSetIterator
+            CombinedPreProcessor$Builder IteratorDataSetIterator
             IteratorMultiDataSetIterator MovingWindowBaseDataSetIterator
             MultipleEpochsIterator ReconstructionDataSetIterator SamplingDataSetIterator
             ExistingDataSetIterator]
@@ -315,7 +316,7 @@
 ;; default dataset iterator mulimethods
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defmethod iterator :curves-dataset-iter [opts]
+#_(defmethod iterator :curves-dataset-iter [opts]
   (let [config (:curves-dataset-iter opts)
         {batch :batch-size
          n-examples :n-examples} config]
@@ -876,7 +877,7 @@
 ;; default dataset iterators user facing fns
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defn new-curves-dataset-iterator
+#_(defn new-curves-dataset-iterator
   "creates a dataset iterator for curbes data
 
   :batch-size (int), the size of the batch

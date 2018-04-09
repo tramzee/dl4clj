@@ -1,6 +1,6 @@
 (ns ^{:doc "see https://deeplearning4j.org/doc/org/deeplearning4j/berkeley/Pair.html"}
     dl4clj.berkeley
-  (:import [org.deeplearning4j.berkeley Pair]))
+  (:import [org.nd4j.linalg.primitives Pair]))
 
 (defn new-pair
   "creates a pair out of the two supplied args"

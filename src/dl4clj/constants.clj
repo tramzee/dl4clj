@@ -25,10 +25,10 @@
            [org.apache.spark.storage StorageLevel]
 
            ;; clustering
-           [org.deeplearning4j.clustering.algorithm.optimisation
+           [org.deeplearning4j.clustering.optimisation
             ClusteringOptimization
             ClusteringOptimizationType]
-           [org.deeplearning4j.clustering.algorithm.strategy
+           [org.deeplearning4j.clustering.strategy
             ClusteringStrategy
             ClusteringStrategyType]))
 
